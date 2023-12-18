@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Vendor\ColorChange\Console\Command\ColorChangeCommand">
+        <arguments>
+            <argument name="state" xsi:type="object">Magento\Framework\App\State</argument>
+            <argument name="storeManager" xsi:type="object">Magento\Store\Model\StoreManagerInterface</argument>
+            <argument name="blockFactory" xsi:type="object">Magento\Cms\Model\BlockFactory</argument>
+            <argument name="directoryList" xsi:type="object">Magento\Framework\App\Filesystem\DirectoryList</argument>
+        </arguments>
+    </type>
+        <type name="Magento\Cms\Block\Block">
+        <plugin name="vendor_colorchange_block_plugin" type="Vendor\ColorChange\Plugin\BlockPlugin" />
+    </type>
+</config>
